@@ -1,0 +1,35 @@
+- name: "Installing VIM"
+  yum:
+    name: vim
+    state: present
+- name: "Installing iperf3"
+  yum:
+    name: iperf3
+    state: present
+- name: "Installing bind-utils"
+  yum:
+    name: bind-utils
+    state: present
+- name: "Installing python3"
+  yum:
+    name: python3
+    state: latest
+- name: "Installing python3-devel"
+  yum:
+    name: python3-devel
+    state: latest
+- name: "Installing docker"
+  pip:
+    name: docker
+    state: latest
+    executable: pip3
+- name: "Installing psutil"
+  pip:
+    name: psutil
+    state: latest
+    executable: pip3
+- name: "Installing pycryptodome"
+  pip:
+    name: pycryptodome
+    state: latest
+    executable: pip3

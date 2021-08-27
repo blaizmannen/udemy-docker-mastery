@@ -1,0 +1,23 @@
+version: '3.1'  # if no version is specified then v1 is assumed. Recommend v2 minimum
+
+services:  # containers. same as docker run
+    drupalsvc: # a friendly name. this is also DNS name inside network
+        image: drupal
+        ports:
+            - 8080:80   
+        volumes:
+            - drupal-modules:/var/www/html/modules
+            - drupal-profiles:/var/www/html/profiles
+            - drupal-themes:/var/www/html/themes
+            - drupal-sites:/var/www/html/sites
+    postgresqlsvc:
+        image: postgres
+        environment: # Optional, same as -e in docker run
+           - POSTGRES_PASSWORD=password
+volumes:
+    drupal-modules:
+    drupal-profiles:
+    drupal-sites:
+    drupal-themes:
+
+
