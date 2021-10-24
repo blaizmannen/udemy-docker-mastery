@@ -1,7 +1,0 @@
-localhost
-[all:vars]
-ansible_connection=ssh
-ansible_user=dathena
-ansible_ssh_pass=dathena
-ansible_port=23
-
